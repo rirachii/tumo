@@ -1,0 +1,27 @@
+//
+//  developer_setup.xcconfig
+//     --> local override of template_setup.xcconfig for Tumo
+//
+//  Copy of template_setup.xcconfig; only the values below have been changed
+//  to rebrand the Blink Shell fork as Tumo under the Evergoods Apple team.
+//
+
+// Apple Developer team for Tumo (Evergoods Holdings LLC)
+TEAM_ID = 5M466F6QXX
+
+// Tumo bundle id (prefix used for app + all extensions/tests)
+BUNDLE_ID = com.evergoods.tumo
+
+// iCloud container prefix (icloud.<CLOUD_ID>)
+CLOUD_ID = com.evergoods.tumo
+
+// Keychain access group
+KEYCHAIN_ID1 = com.evergoods.tumo
+
+// Publishing option: developer for local builds
+SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=Debug]   = BLINK_PUBLISHING_OPTION_DEVELOPER
+SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=Release] = BLINK_PUBLISHING_OPTION_DEVELOPER
+
+BLINK_MIGRATION_SCHEME = tumov1
+
+BLINK_APP_FONT = JetBrains Mono
